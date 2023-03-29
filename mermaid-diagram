@@ -1,0 +1,19 @@
+flowchart TD
+    A[Project 4] --> B(DockerHub)
+    B --> C(Installing docker)
+
+    C --> |one| D(Dependencies)
+    D --> E(WSL 2)
+    D --> F(Ubuntu 20.04)
+    C --> |two| G(Docker Desktop)
+
+    B --> H(Dockerfile)
+    H --> I(Commands)
+    I --> FROM
+    I --> RUN 
+    I --> COPY 
+    I --> EXPOSE
+    I --> CMD 
+
+    B --> J(Run the container)
+    J --> K(docker run -p )

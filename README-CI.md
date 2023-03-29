@@ -10,8 +10,8 @@
     * You will need the `COPY` command to copy any files into the image.  
     * You will need the `EXPOSE` command to open a specified port of the image.  
     * You will need the `CMD` command to have your specified commands be ran whenever you use `docker run` on the image
-* To run the container, you can use the command `docker run -p <x> <y>`, where `x` is the port number listed in your Dockerfile, and `y` is the name of the image.  
-* Once you have the container up and running, you can go to the URL bar at the top of your internet browser and type in `localhost:<z>`, where `z` is the port number you used in your Dockerfile and `docker run` command.  
+* To run the container, you can use the command `docker run -p <x>:<y> <z>`, where `x` is the host port, `y` is the remote port, and `z` is the name of the image.  
+* Once you have the container up and running, you can go to the URL bar at the top of your internet browser and type in `localhost:<x>`, where `x` is the port number you used in your Dockerfile and `docker run` command.  
 ## Part 2 - GitHub Actions and DockerHub
 ### Process to create public repo in DockerHub
 *  Once you have created a DockerHub account, you can go to your repositories by clicking the "Repositories" tab at the top of the screen. From there, you can click on "Create repository" towards the top right of your screen. It will prompt you for a repository name and an optional description of the repository. You have the option between making the repository public or private. In this case, we want to make sure that public is the one selected.
