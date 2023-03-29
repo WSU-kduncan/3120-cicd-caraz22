@@ -1,19 +1,60 @@
 flowchart TD
-    A[Project 4] --> B(DockerHub)
-    B --> C(Installing docker)
+    docker(Docker) --> install(Installing docker)
 
-    C --> |one| D(Dependencies)
-    D --> E(WSL 2)
-    D --> F(Ubuntu 20.04)
-    C --> |two| G(Docker Desktop)
+    install --> |one| d(Dependencies)
+    d --> w(WSL 2)
+    d --> u(Ubuntu 20.04)
+    install --> |two| dd(Docker Desktop)
 
-    B --> H(Dockerfile)
-    H --> I(Commands)
-    I --> FROM
-    I --> RUN 
-    I --> COPY 
-    I --> EXPOSE
-    I --> CMD 
+    docker --> df(Dockerfile)
+    df --> cmd(Commands)
+    cmd --> FROM
+    cmd --> RUN 
+    cmd --> COPY 
+    cmd --> EXPOSE
+    cmd --> CMD 
 
-    B --> J(Run the container)
-    J --> K(docker run -p )
+    docker --> rc(Run the container)
+    rc --> dr(docker run -p <1>:<2> <3>)
+    dr --> dr1(1 = host port)
+    dr --> dr2(2 = container's port)
+    dr --> dr3(3 = image name)
+
+    docker --> v(View project running in container)
+    v --> lh(localhost:<1>)
+    lh --> lh1(1 = container's port)
+
+flowchart TD
+    actionsDH(GitHub actions and DockerHub) --> dh(DockerHub)
+    dh --> createRepo(Create a public repository)
+    dh --> auth(Authenticate with DockerHub)
+    auth --> login(Using a token)
+    login --> token(docker login -u <1> -p <2>)
+    token --> token1(1 = username)
+    token --> token2(2 = token)
+
+    dh --> push(Pushing container to DockerHub)
+    push --> dp(docker push <1>/<2>:<3>)
+    dp --> dp1(1 = username)
+    dp --> dp2(2 = DockerHub repo)
+    dp --> dp3(3 = image version)
+
+    actionsDH --> gha(GitHub actions)
+    gha --> ghs(GitHub secrets)
+    ghs --> |one| account(Go to your GitHub repository settings)
+    account --> |two| sv(Go to the 'Secrets and Variables' tab)
+    sv --> |three| actions(Go to 'Actions' on the dropdown menu)
+    actions --> |four| createSecret(Click 'New Repository Secret')
+    createSecret --> name(Name of secret)
+    createSecret --> desc(Secret contents)
+
+    gha --> ghwf(GitHub workflow)
+    ghwf --> wfName(Workflow name)
+    ghwf --> trigger(Workflow triggers)
+    ghwf --> env(Variables)
+    ghwf --> jobs(Jobs)
+    jobs --> jobName(Job name)
+    jobs --> runsOn(What it runs on)
+    jobs --> steps(Steps)
+    steps --> stepName(Name of step)
+    steps --> stepUse(Usage of step)
