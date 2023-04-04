@@ -8,4 +8,4 @@
 ### Behavior of Github workflow
 * what does it do and when
 ### Link to Docker Hub repository
-* [My DockerHub repo](https://hub.docker.com/repository/docker/caraz22/3120-proj4/general")
+* [My DockerHub repo](https://hub.docker.com/repository/docker/caraz22/3120-proj4/general)
