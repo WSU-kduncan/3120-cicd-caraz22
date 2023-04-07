@@ -8,4 +8,19 @@
 ### Behavior of GitHub workflow
 * My GitHub workflow creates an image with a specified version and pushes it to my Docker Hub repository. It is triggered by the two commands above. A tag must be created and pushed to the GitHub repository.
 ### Link to Docker Hub repository
-* [My DockerHub repo](https://hub.docker.com/repository/docker/caraz22/3120-proj4/general)
+* [My DockerHub repo](https://hub.docker.com/repository/docker/caraz22/3120-proj4/general)  
+---  
+## Part 2 - Deployment
+### How to install Docker to your instance
+* 
+### Container restart script
+* Justification and description of what it does
+* Where it should be on server (if someone were to use your setup)
+### Setting up `webhook` on the server
+* How to install adnah's `webhook` to the server
+* How to start the webhook  
+    * since our instance's reboot, we need to handle this
+### How to configure GitHub OR DockerHub to message the listener
+* 
+### RECORD your whole workflow process - from `commit` and `push` to your server getting a fresh image
+* 
