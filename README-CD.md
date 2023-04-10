@@ -12,7 +12,17 @@
 ---  
 ## Part 2 - Deployment
 ### How to install Docker to your instance
-* 
+* I used three commands to install Docker on my AWS instance:
+```bash
+sudo apt install docker.io -y
+
+sudo service docker start
+
+sudo usermod -a -G docker ubuntu
+```
+* The first one is to install docker, with `-y` just to save some time.  
+* The second one is to start docker up after the install.  
+* The third one is to add the user ubuntu the docker group so that you don't need to use `sudo` for every docker command.
 ### Container restart script
 * Justification and description of what it does
 * Where it should be on server (if someone were to use your setup)
