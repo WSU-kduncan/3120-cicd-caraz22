@@ -1,0 +1,3 @@
+- id: redeploy-webhook
+  execute-command: "/var/scripts/pulldocker.sh"
+  command-working-directory: "/var/webhook"
