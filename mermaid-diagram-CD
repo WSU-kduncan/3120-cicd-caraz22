@@ -1,1 +1,17 @@
+flowchart TD
+    gtags[Git tags] --> generate(Generate a tag for GitHub)
+    generate --> gcommand(git tag -a v<1>.<2>.<3> -m ''version <1>.<2>.<3>'')
+    gcommand --> 1(1 = major)
+    gcommand --> 2(2 = minor)
+    gcommand --> 3(3 = patch)
 
+    gtags --> pushtag(Push tag and activate workflow)
+    pushtag --> tcommand(git push origin v<1>.<2>.<3>)
+    tcommand --> one(1 = major)
+    tcommand --> two(2 = minor)
+    tcommand --> three(3 = patch)
+
+    gcommand --> |triggers| wf(Workflow)
+    tcommand --> |triggers| wf
+
+    
