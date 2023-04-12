@@ -1,0 +1,9 @@
+1. docker run 
+2. webhook -hooks 
+3. go to ip 
+4. change index.html 
+5. git tag -a v2.7.1 -m "version 2.7.1" commit push 
+6. check workflow 
+7. check dockerhub 
+8. check webhook terminal 
+9. refresh ip
