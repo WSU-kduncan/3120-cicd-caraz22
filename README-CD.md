@@ -44,4 +44,4 @@ This will only work after configuring your webhook config file, more on that bel
 ### How to configure GitHub OR DockerHub to message the listener
 * I edited my GitHub action workflow. I added a new job, `redeploy`. I used the similar layout as the `build_and_push` job, where it has what it runs on and steps. It does have a `needs` dependency on the `build_and_push` job, and I also created a new secret for my webhook URL. The most important part was adding `joelwmale/webhook-action@master`, which signals the listener, the running webhook.
 ### RECORD your whole workflow process - from `commit` and `push` to your server getting a fresh image
-* 
+* I swear it was working, but I went to record and then it didn't, so that's very cool! Was also meaning to do a diagram for part 2 that I did not get around to.
